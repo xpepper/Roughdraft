@@ -3,7 +3,6 @@ Roughdraft
 
 A Ruby implementation of [Gist.io](https://github.com/idan/gistio) built with Sinatra.
 
-
 ## Usage ##
 
 View a gist at roughdraft.dev/*gist-id*. Example: [roughdraft.dev/4370358](roughdraft.dev/4370358)
@@ -36,7 +35,6 @@ cd Roughdraft
 mkdir tmp
 touch tmp/restart.txt
 ```
-
 Change the `APP_DOMAIN` constant in roughdraft.rb, line 68, to whatever local domain you want to use. I recommend using [Pow](http://pow.cx) for local development, especially on this project as the username subdomain feature doesn't work with IP addresses.
 
 The GitHub API limits the number of unauthenticated requests to 60 per hour, which is too little for production and often even for development. To get around this you will need to [register your app with GitHub](https://github.com/settings/applications/new). Once you have your client ID and secret, rename config/github.example.yml to config/github.yml and paste in your app's credentials. Mine looks something like this:
